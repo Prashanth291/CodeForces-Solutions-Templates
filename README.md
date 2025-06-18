@@ -315,20 +315,21 @@ print(sum)
 
 How does this reading and writing actually work? Think of Standard Input and Standard Output as pipes connecting your program to the testing environment.
 
-```mermaid
 sequenceDiagram
     participant TS as Testing System
     participant Prog as Your Program
 
     TS->>Prog: Problem Input Data (via Standard Input pipe)
     Note over TS, Prog: Your program reads from its Standard Input
+
     Prog->>Prog: Reads data (e.g., using Scanner or input())
     Prog->>Prog: Processes data (e.g., calculates sum)
     Prog->>TS: Calculated Answer (via Standard Output pipe)
     Note over TS, Prog: Your program writes to its Standard Output
+
     TS->>TS: Reads answer from Standard Output
     TS->>TS: Checks if answer is correct
-```
+
 
 The Testing System writes the input data into the Standard Input "pipe" connected to your program. Your program reads from this pipe. Once your program calculates the answer, it writes it into the Standard Output "pipe," and the Testing System reads from there to verify your solution.
 
