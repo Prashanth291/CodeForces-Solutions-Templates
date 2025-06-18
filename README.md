@@ -51,8 +51,7 @@ flowchart TD
 
 ## Chapters
 
-1. [Standard Input/Output
-](01_standard_input_output_.md)
+1. Standard Input/Output
 2. [Handling Multiple Test Cases
 ](02_handling_multiple_test_cases_.md)
 3. [Using Maps and Sets
