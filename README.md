@@ -52,24 +52,15 @@ flowchart TD
 ## Chapters
 
 1. Standard Input/Output
-2. [Handling Multiple Test Cases
-](02_handling_multiple_test_cases_.md)
-3. [Using Maps and Sets
-](03_using_maps_and_sets_.md)
-4. [Array Manipulation
-](04_array_manipulation_.md)
-5. [Sorting
-](05_sorting_.md)
-6. [String Processing
-](06_string_processing_.md)
-7. [Basic Number Theory/Math
-](07_basic_number_theory_math_.md)
-8. [Recursion
-](08_recursion_.md)
-9. [Dynamic Programming (DP)
-](09_dynamic_programming__dp__.md)
-10. [Greedy Algorithms
-](10_greedy_algorithms_.md)
+2. Handling Multiple Test Cases
+3. Using Maps and Sets
+4. Array Manipulation
+5. Sorting
+6. String Processing
+7. Basic Number Theory/Math
+8. Recursion
+9. Dynamic Programming (DP)
+10. Greedy Algorithms
 
 
 
