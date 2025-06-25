@@ -1,0 +1,61 @@
+import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
+public class ThreeActivities {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while(t-->0)
+        {
+            int n = sc.nextInt();
+            int[][] grid = new int[3][n];
+            for(int i = 0;i<3;i++)
+            {
+                for(int j = 0;j<n;j++)
+                {
+                    grid[i][j] = sc.nextInt();
+                }
+            }
+            long ans = 0;
+            for(int i=0;i<n-2;i++)
+            {
+                for(int j=1;j<n-1;j++)
+                {
+                    for(int k = 2;k<n;k++)
+                    {
+                        long sum = grid[0][i]+grid[1][j]+grid[2][k];
+                        ans = Math.max(ans,sum);
+                    }
+                }
+            }
+            System.out.println(ans);
+        }
+    }
+    
+}
+/*
+ * InputCopy
+4
+3
+1 10 1
+10 1 1
+1 1 10
+4
+30 20 10 1
+30 5 15 20
+30 25 10 10
+10
+5 19 12 3 18 18 6 17 10 13
+15 17 19 11 16 3 11 17 17 17
+1 17 18 10 15 8 17 3 13 12
+10
+17 5 4 18 12 4 11 2 16 16
+8 4 14 19 3 12 6 7 5 16
+3 4 8 11 10 8 10 2 20 3
+OutputCopy
+30
+75
+55
+56
+ */

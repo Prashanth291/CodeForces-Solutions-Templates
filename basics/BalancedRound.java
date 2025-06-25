@@ -1,7 +1,7 @@
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Map;
+import java.util.Set;
 
 public class BalancedRound {
     public static void main(String[] args) {
@@ -11,29 +11,28 @@ public class BalancedRound {
         {
             int n = sc.nextInt();
             int k = sc.nextInt();
+            // sc.nextLine();
             int[] nums = new int[n];
-            // Map<Integer,Integer> map = new HashMap<>();
-            for(int i=0;i<n;i++){
-            nums[i] = sc.nextInt();
-            // map.put(nums[i],map.getOrDefault(nums[i], 0)+1);
-            }
+            for(int i=0;i<n;i++) nums[i] = sc.nextInt();
             Arrays.sort(nums);
             int maxStreak = 1,currStreak = 1;
-            for(int i=1;i<n;i++)
+            for(int i = 1;i<n;i++)
             {
                 if(nums[i] - nums[i-1] <=k)
                 {
                     currStreak++;
                 }
-                else
-                {
-                    maxStreak = Math.max(maxStreak,currStreak);
+                else{
+                    // maxStreak = Math.max(currStreak,maxStreak);
                     currStreak = 1;
+                    
                 }
+                // System.out.println("HI");
+                maxStreak = Math.max(currStreak,maxStreak);
+                
             }
-            maxStreak = Math.max(maxStreak,currStreak);
+            // maxStreak = Math.max(currStreak,maxStreak);
             System.out.println(n - maxStreak);
-            
         }
         sc.close();
     }
